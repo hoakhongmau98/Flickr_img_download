@@ -44,8 +44,7 @@ def get_id_img(link_album, auth_dir):
     # cut style from div to get id_img from background_image
     for div in div_list:
         style_text = div.attrs['style']
-        id_img = style_text.find('65535/')
-        id_img = style_text[style_text.find('65535/')+6:].split('_')[0]
+        id_img = style_text.split('/')[-1].split('_')[0]
         link_img = 'https://www.flickr.com/photos/'+link_text[4]+'/'+id_img+'/sizes/h/'
         print(link_img)
         download_img(link_img, id_img, direct)

@@ -68,3 +68,11 @@ for i in album_div:
     print(i.attrs['href'])
     get_id_img(i.attrs['href'], auth_dir)
 
+# Debug when 403/103/104
+# for i in range(37, len(album_div)):
+#     # print(i.a.attrs['title'], i.a.attrs['href'])
+#     i = album_div[i]
+#     print('-'*80)
+#     print('Link album:')
+#     print(i.attrs['href'])
+#     get_id_img(i.attrs['href'], auth_dir)
